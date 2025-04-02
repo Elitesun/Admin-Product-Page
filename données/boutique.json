@@ -1,0 +1,84 @@
+{
+    "id": "0",
+    "long": 0,
+    "idpartner": "",
+    "etoile": 0,
+    "adresse": "",
+    "iscert": false,
+    "cover": "",
+    "mois": 2,
+    "isdesactive": false,
+    "a_jour": 13,
+    "likees": [],
+    "idCompte": "",
+    "nom_l": "j'marley&co.",
+    "a_date": "13-2-2025",
+    "lesConsultes": [
+        ""
+    ],
+    "balance": 0,
+    "a_mois": 2,
+    "nom": "J'Marley&Co.",
+    "type": "Boutique",
+    "proprietaire": "Anipah",
+    "isdelete": false,
+    "lesCategories": [],
+    "likes": 25,
+    "lat": 0,
+    "duree": 30,
+    "lePersonnel": [],
+    "nbrConsultes": 1,
+    "isvideo": false,
+    "top": false,
+    "lesServices": [],
+    "gererSAV": true,
+    "alaune": [],
+    "isLoyerPaid": false,
+    "jour": 13,
+    "lesArticles": [],
+    "horaires": [
+        {
+            "end": 0,
+            "jour": "Lundi",
+            "start": 0
+        },
+        {
+            "jour": "Mardi",
+            "start": 0,
+            "end": 0
+        },
+        {
+            "start": 0,
+            "end": 0,
+            "jour": "Mercredi"
+        },
+        {
+            "jour": "Jeudi",
+            "start": 0,
+            "end": 0
+        },
+        {
+            "start": 0,
+            "jour": "Vendredi",
+            "end": 0
+        },
+        {
+            "end": 0,
+            "start": 0,
+            "jour": "Samedi"
+        },
+        {
+            "end": 0,
+            "jour": "Dimamche",
+            "start": 0
+        }
+    ],
+    "nbrArticle": 7,
+    "lesClients": [],
+    "annee": 2025,
+    "isboosted": true,
+    "desc": "Toutes sortes de business légal",
+    "date": "13-2-2025",
+    "isPromoted": false,
+    "a_annee": 2025
+}
