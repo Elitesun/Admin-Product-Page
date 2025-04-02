@@ -1,8 +1,9 @@
 import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
-import article from "../données/article.json"
-const Product_detail = () => {
-  return (
-    <div className="mb-6 flex items-center justify-between">
+import article from "../../données/article.json"
+export default function Layout({children}: {children: React.ReactNode}) {
+    return (
+        <header>
+             <div className="mb-6 flex items-center justify-between">
       <div>
         <h1 className="text-2xl font-light text-gray-900">
           Détails du Produit
@@ -20,7 +21,7 @@ const Product_detail = () => {
         </button>
       </div>
     </div>
-  );
-};
-
-export default Product_detail;
+        <section>{children}</section>
+        </header>
+    );
+}
