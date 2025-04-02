@@ -1,25 +1,84 @@
-import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
+import { FaRegCalendarAlt , FaRegThumbsUp , FaShoppingCart , FaEye } from "react-icons/fa";
 import article from "../données/article.json"
 const Product_detail = () => {
   return (
-    <div className="mb-6 flex items-center justify-between">
-      <div>
-        <h1 className="text-2xl font-light text-gray-900">
-          Détails du Produit
-        </h1>
-        <p className="mt-1 text-sm text-gray-500">ID: {article.id}</p>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    {/* Left Column - Image */}
+    <div className="space-y-6">
+      {/* Product Image */}
+      <div className="aspect-square w-3/4 mx-auto bg-gray-50 rounded-lg overflow-hidden shadow-sm">
+        <img
+          src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=800"
+          alt={article.nom}
+          className="w-full h-full object-cover"
+        />
       </div>
-      <div className="flex gap-3">
-        <button className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 flex items-center gap-2 cursor-pointer">
-          <FaRegEdit className="h-4 w-4" />
-          Modifier
-        </button>
-        <button className="px-3 py-1.5 text-sm text-red-600 hover:text-red-700 flex items-center gap-2 cursor-pointer">
-          <FaRegTrashAlt className="h-4 w-4" />
-          Supprimer
-        </button>
-      </div>
+      <h3 className="text-sm font-medium text-gray-900 mb-3">État du Produit</h3>
+       {/* Etats du produit */}
+      <div className="flex flex-wrap gap-3">
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isNouveau ? 'bg-orange-50' : 'bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isNouveau ? 'bg-orange-500' : 'bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isNouveau ? 'text-orange-700' : 'text-gray-600'}`}>Nouveau</span>
+          </div>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isRecommand ? 'bg-green-50' : 'bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isRecommand ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isRecommand ? 'text-green-700' : 'text-gray-600'}`}>Recommandé</span>
+          </div>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isboosted ? 'bg-green-50' : 'bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isboosted ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isboosted ? 'text-green-700' : 'text-gray-600'}`}>Boosté</span>
+          </div>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.alaune ? 'bg-green-50' : 'bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.alaune ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.alaune ? 'text-green-700' : 'text-gray-600'}`}>À la une</span>
+          </div>
+        </div>
+      
     </div>
+
+    {/* Right Column - Details */}
+    <div className="space-y-5">
+      <div>
+        <h2 className="text-xl font-medium text-gray-900">{article.nom}</h2>
+        <p className="mt-3 text-gray-600">{article.description}</p>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-1">
+          <div className="text-sm text-gray-500">Prix</div>
+          <div className="text-lg font-medium text-gray-900">{article.prix.toLocaleString()} FCFA</div>
+        </div>
+        <div className="space-y-1">
+          <div className="text-sm text-gray-500">Catégorie</div>
+          <div className="text-lg font-medium text-gray-900">{article.categorie}</div>
+        </div>
+      </div>
+
+        {/* cards details */}
+      <div className="flex flex-wrap justify-between p-2 rounded-lg">
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
+          <FaEye className="h-4 w-4 text-orange-400" />
+          <span className="text-sm font-medium text-gray-700">{article.nbrConsultes}</span>
+          <span className="text-xs text-orange-600">vues</span>
+        </div>
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
+          <FaShoppingCart className="h-4 w-4 text-orange-400" />
+          <span className="text-sm font-medium text-gray-700">{article.nbrAchats}</span>
+          <span className="text-xs text-orange-600">achats</span>
+        </div>
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
+          <FaRegThumbsUp className="h-4 w-4 text-orange-400" />
+          <span className="text-sm font-medium text-gray-700">{article.likes}</span>
+          <span className="text-xs text-orange-600">j'aime</span>
+        </div>
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
+          <FaRegCalendarAlt className="h-4 w-4 text-orange-400" />
+          <span className="text-sm font-medium text-gray-700">{`${article.jour}/${article.mois}/${article.annee}`}</span>
+        </div>
+      </div>
+        
+    </div>
+  </div>
   );
 };
 

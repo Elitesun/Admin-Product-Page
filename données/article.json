@@ -20,7 +20,7 @@
     "idCreateur": "96G",
     "isRecommand": false,
     "prix": 20000,
-    "categorie": "",
+    "categorie": "Accessoires",
     "alaune": false,
     "total": 20,
     "nom_l": "coffret de portefeuille, parfum, montre, ceinture, gommette",
@@ -32,7 +32,7 @@
     "video": "",
     "prixremise": 0,
     "idVitrine": "1575",
-    "isboosted": false,
+    "isboosted": true,
     "images": [
        
     ],
