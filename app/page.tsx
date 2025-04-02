@@ -27,7 +27,7 @@ export default function Home() {
             <p className="mt-2 text-gray-600">Gérer les prestataires de services</p>
           </Link>
 
-          <Link href="/detail-laala/page" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <Link href="/laala" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-semibold text-gray-800">Détail Laala</h2>
             <p className="mt-2 text-gray-600">Détails du produit Laala</p>
           </Link>
