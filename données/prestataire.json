@@ -1,0 +1,91 @@
+{
+    "id": "332025Service145527213",
+    "long": 0,
+    "galeries": [
+    ],
+    "islivreur": false,
+    "iscert": false,
+    "proprio": "Emmanuel",
+    "type": "prestation sur place (prix variable)",
+    "isdesactive": false,
+    "miniature": "",
+    "cover": "",
+    "lesAvis": [],
+    "nbrlikes": 1,
+    "a_mois": 3,
+    "horaires": [
+        {
+            "jour": "Lundi",
+            "end": 0,
+            "start": 0
+        },
+        {
+            "start": 0,
+            "jour": "Mardi",
+            "end": 0
+        },
+        {
+            "end": 0,
+            "start": 0,
+            "jour": "Mercredi"
+        },
+        {
+            "jour": "Jeudi",
+            "start": 0,
+            "end": 0
+        },
+        {
+            "jour": "Vendredi",
+            "end": 0,
+            "start": 0
+        },
+        {
+            "jour": "Samedi",
+            "start": 0,
+            "end": 0
+        },
+        {
+            "end": 0,
+            "start": 0,
+            "jour": "Dimamche"
+        }
+    ],
+    "idpartner": "laalapasca",
+    "CA": 0,
+    "alaune": false,
+    "adresse": "",
+    "a_date": "3-3-2025",
+    "isSoliciteLivreur": false,
+    "date": "3-3-2025",
+    "reservations": [],
+    "desc": "Étude et réalisations de tout travaux de menuiserie Aluminium Fabrication de portes, fenêtres placards en inox, grille moustiquaire pliable, etc...",
+    "ispaid": true,
+    "slogan": "",
+    "jour": 3,
+    "lat": 0,
+    "isvideo": false,
+    "a_annee": 2025,
+    "nom": "Ets Emmanuel Alu",
+    "nom_l": "ets emmanuel alu",
+    "a_jour": 3,
+    "views": [
+        "",
+        ""
+    ],
+    "idCompte": "",
+    "lesServices": [],
+    "annee": 2025,
+    "isDemarcheur": false,
+    "nbrreservations": 0,
+    "idlivreur": "",
+    "isdelete": false,
+    "isSav": false,
+    "isboosted": false,
+    "nbrviews": 2,
+    "duree": 30,
+    "balance": 0,
+    "mois": 3,
+    "likes": [
+        ""
+    ]
+}
