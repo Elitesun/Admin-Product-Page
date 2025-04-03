@@ -1,9 +1,9 @@
 import Laala_detail from "@/Components/détails_laala";
 const page = () => {
     return (
-        <div>
+        <main>
             <Laala_detail/>
-        </div>
+        </main>
     );
 }
 

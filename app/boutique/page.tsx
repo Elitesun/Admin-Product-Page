@@ -1,9 +1,9 @@
 import Boutique_detail from "@/Components/détails_boutique";
 const page = () => {
     return (
-        <div>
+        <main>
             <Boutique_detail/>
-        </div>
+        </main>
     );
 }
 

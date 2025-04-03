@@ -1,9 +1,9 @@
-import détails_prestataire from "@/Components/détails_prestataire";
+import PrestataireDetail from "@/Components/détails_prestataire";
 const page = () => {
     return (
-        <div>
-            Enter
-        </div>
+        <main >
+            <PrestataireDetail/>
+        </main>
     );
 }
 

@@ -21,7 +21,7 @@ export default function Home() {
             <p className="mt-2 text-gray-600">Gérer les produits et l'inventaire</p>
           </Link>
 
-          <Link href="/admin/prestataire" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+          <Link href="/prestataire" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-semibold text-gray-800">Prestataire</h2>
             <p className="mt-2 text-gray-600">Gérer les prestataires de services</p>
           </Link>
