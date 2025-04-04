@@ -11,15 +11,17 @@ const Product_detail = () => {
         <Image
           src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=800"
           alt={article.nom}
+          width={800}
+          height={800}
           className="w-full h-full object-cover"
         />
       </div>
       <h3 className="text-sm font-medium text-gray-900 mb-3">&Eacute;tat du Produit</h3>
        {/* Etats du produit */}
       <div className="flex flex-wrap gap-3">
-          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isNouveau ? ' bg-orange-50'  : ' bg-gray-100' }`}>
-            <div className={`w-2 h-2 rounded-full ${article.isNouveau ? ' bg-orange-500'  : ' bg-gray-400' }`}></div>
-            <span className={`text-sm font-medium ${article.isNouveau ? ' text-orange-700'  : ' text-gray-600' }`}>Nouveau</span>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isNouveau ? ' bg-[#FE5733]/10' : ' bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isNouveau ? ' bg-[#FE5733]' : ' bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isNouveau ? ' text-[#FE5733]' : ' text-gray-600'}`}>Nouveau</span>
           </div>
           <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isRecommand ? ' bg-green-50'  : ' bg-gray-100' }`}>
             <div className={`w-2 h-2 rounded-full ${article.isRecommand ? ' bg-green-500'  : ' bg-gray-400' }`}></div>
@@ -57,23 +59,23 @@ const Product_detail = () => {
 
         {/* cards details */}
       <div className="flex flex-wrap justify-between p-2 rounded-lg">
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
-          <FaEye className="h-4 w-4 text-orange-400" />
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[#FE5733]/10 transition-colors">
+          <FaEye className="h-4 w-4 text-[#FE5733]" />
           <span className="text-sm font-medium text-gray-700">{article.nbrConsultes}</span>
-          <span className="text-xs text-orange-600">vues</span>
+          <span className="text-xs text-[#FE5733]">vues</span>
         </div>
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
-          <FaShoppingCart className="h-4 w-4 text-orange-400" />
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[#FE5733]/10 transition-colors">
+          <FaShoppingCart className="h-4 w-4 text-[#FE5733]" />
           <span className="text-sm font-medium text-gray-700">{article.nbrAchats}</span>
-          <span className="text-xs text-orange-600">achats</span>
+          <span className="text-xs text-[#FE5733]">achats</span>
         </div>
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
-          <FaRegThumbsUp className="h-4 w-4 text-orange-400" />
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[#FE5733]/10 transition-colors">
+          <FaRegThumbsUp className="h-4 w-4 text-[#FE5733]" />
           <span className="text-sm font-medium text-gray-700">{article.likes}</span>
-          <span className="text-xs text-orange-600">j&apos; aime</span>
+          <span className="text-xs text-[#FE5733]">j&apos; aime</span>
         </div>
-        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
-          <FaRegCalendarAlt className="h-4 w-4 text-orange-400" />
+        <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[#FE5733]/10 transition-colors">
+          <FaRegCalendarAlt className="h-4 w-4 text-[#FE5733]" />
           <span className="text-sm font-medium text-gray-700">{`${article.jour}/${article.mois}/${article.annee}`}</span>
         </div>
       </div>

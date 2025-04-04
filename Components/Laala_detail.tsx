@@ -38,7 +38,7 @@ const Laala_detail = () => {
                 <button className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors">
                   Suspendre
                 </button>
-                <button className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors">
+                <button className="px-4 py-2 bg-[var(--laala-color)] text-white rounded-lg hover:bg-opacity-90 transition-colors">
                   Supprimer
                 </button>
               </div>
@@ -49,13 +49,15 @@ const Laala_detail = () => {
               <Image
                 src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                 alt="Content Preview"
+                width={1350}
+                height={759}
                 className="w-full h-full object-cover rounded-lg"
               />
               {laala.chooselive && (
                 <div className="absolute top-4 left-4 flex items-center space-x-2 bg-black bg-opacity-50 px-3 py-1 rounded-full">
                   <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-orange-500"></span>
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--laala-color)] opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[var(--laala-color)]"></span>
                   </span>
                   <span className="text-white text-sm font-medium">Live</span>
                 </div>
@@ -69,7 +71,9 @@ const Laala_detail = () => {
                   <Image
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="Creator"
-                    className="w-12 h-12 rounded-full border-2 border-orange-200"
+                    width={48}
+                    height={48}
+                    className="rounded-full border-2 border-[var(--laala-color)] border-opacity-20"
                   />
                   <div>
                     <p className="font-medium text-gray-900">{laala.nomCrea}</p>

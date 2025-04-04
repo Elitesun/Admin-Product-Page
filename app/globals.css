@@ -1,1 +1,4 @@
 @import "tailwindcss";
+:root {
+  --laala-color: #fe5733;
+}

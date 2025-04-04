@@ -12,6 +12,8 @@ export default function Layout({children}: {children: React.ReactNode}) {
                   <Image
                     src="https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?ixlib=rb-4.0.3"
                     alt="Creator"
+                    width={48}
+                    height={48}
                     className="w-12 h-12 rounded-full border-2 border-orange-200"
                   />
                   <div>

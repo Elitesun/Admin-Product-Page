@@ -1,102 +1,118 @@
-import { BiMapPin, BiStar, BiLike, BiShow, BiDollar, BiCalendar, BiCertification, BiStore, BiChevronRight } from 'react-icons/bi' 
+import {
+  BiMapPin,
+  BiStar,
+  BiLike,
+  BiShow,
+  BiDollar,
+  BiCalendar,
+  BiCertification,
+  BiStore,
+  BiChevronRight,
+} from "react-icons/bi";
 import { MdDeliveryDining } from "react-icons/md";
-import prestataire from "../donnees/prestataire.json"
+import prestataire from "../donnees/prestataire.json";
+
 const Prestataire_detail = () => {
-    return (
-       <main className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Business Details Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm col-span-full lg:col-span-2">
-          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <BiStore className="text-orange-500" size={24} />
-            Details
-          </h2>
-          <div className="space-y-4">
-            <div>
-              <span className="text-gray-600">Type</span>
-              <p className="font-medium">{prestataire.type}</p>
+  return (
+    <main className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* Left column - Details Card */}
+      <div className="bg-white rounded-2xl p-6 shadow-sm lg:col-span-2">
+        <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+          <BiStore className="text-[var(--laala-color)]" size={24} />
+          Details
+        </h2>
+        <div className="space-y-4">
+          <div>
+            <span className="text-gray-600">Type</span>
+            <p className="font-medium">{prestataire.type}</p>
+          </div>
+          <div>
+            <span className="text-gray-600">Description</span>
+            <p className="font-medium">{prestataire.desc}</p>
+          </div>
+          <div className="flex gap-5">
+            <div className="flex items-center gap-2">
+              <BiCertification
+                className="text-[var(--laala-color)]"
+                size={20}
+              />
+              <span className="text-gray-600">
+                {prestataire.iscert ? "Certifi&eacute;" : "Non Certifi&eacute;"}
+              </span>
             </div>
-            <div>
-              <span className="text-gray-600">Description</span>
-              <p className="font-medium">{prestataire.desc}</p>
+            <div className="flex items-center gap-2">
+              <MdDeliveryDining
+                className="text-[var(--laala-color)]"
+                size={20}
+              />
+              <span
+                className={`${
+                  prestataire.islivreur
+                    ? " text-[var(--laala-color)]"
+                    : " text-gray-600"
+                }`}
+              >
+                {prestataire.islivreur ? "Livreur" : " Non Livreur"}
+              </span>
             </div>
-            <div className="flex gap-5">
-              <div className="flex items-center gap-2">
-                <BiCertification className="text-orange-500" size={20} />
-                <span className="text-gray-600">{prestataire.iscert ? "Certifi&eacute;" : "Non Certifi&eacute;"}</span>
+          </div>
+          {/* Updated Stats Info */}
+          <div className="flex flex-wrap gap-3 mt-6">
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--laala-color)]/5 transition-colors">
+              <BiLike className="h-5 w-5 text-[var(--laala-color)]" />
+              <div className="flex flex-col items-center sm:flex-row sm:gap-2 sm:items-baseline">
+                <span className="text-base font-semibold text-gray-900">
+                  {prestataire.nbrlikes}
+                </span>
+                <span className="text-xs text-[var(--laala-color)]">Likes</span>
               </div>
-              <div className="flex items-center gap-2">
-                <MdDeliveryDining className="text-orange-500" size={20} />
-                <span className={`${prestataire.islivreur ? ' text-orange-500'  : ' text-gray-600' }`}>
-                  {prestataire.islivreur ? 'Livreur'  : ' Non Livreur' }
+            </div>
+
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--laala-color)]/5 transition-colors">
+              <BiShow className="h-5 w-5 text-[var(--laala-color)]" />
+              <div className="flex flex-col items-center sm:flex-row sm:gap-2 sm:items-baseline">
+                <span className="text-base font-semibold text-gray-900">
+                  {prestataire.nbrviews}
+                </span>
+                <span className="text-xs text-[var(--laala-color)]">Vues</span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--laala-color)]/5 transition-colors">
+              <BiDollar className="h-5 w-5 text-[var(--laala-color)]" />
+              <div className="flex flex-col items-center sm:flex-row sm:gap-2 sm:items-baseline">
+                <span className="text-base font-semibold text-gray-900">5</span>
+                <span className="text-xs text-[var(--laala-color)]">
+                  Revenue
                 </span>
               </div>
             </div>
           </div>
         </div>
-        {/* Stats Cards */}
-        <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white">
-          <div className="grid grid-cols-1 gap-4">
-            {/* Likes Stats */}
-            <div className="flex gap-4 items-center p-3 bg-white/10 rounded-lg">
-              <div className="flex items-center gap-2 mb-1">
-                <BiLike size={20} />
-                <span className="text-2xl font-bold">{prestataire.nbrlikes}</span>
-              </div>
-              <p className="text-orange-100 text-sm">Total Likes</p>
-            </div>
+      </div>
 
-            {/* Views Stats */}
-            <div className="flex gap-4 items-center p-3 bg-white/10 rounded-lg">
-              <div className="flex items-center gap-2 mb-1">
-                <BiShow size={20} />
-                <span className="text-2xl font-bold">{prestataire.nbrviews}</span>
-              </div>
-              <p className="text-orange-100 text-sm">Profile Views</p>
-            </div>
-
-            {/* Revenue Stats */}
-            <div className="flex gap-4 items-center p-3 bg-white/10 rounded-lg">
-              <div className="flex items-center gap-2 mb-1">
-                <BiDollar size={20} />
-                <span className="text-2xl font-bold">5</span>
-              </div>
-              <p className="text-orange-100 text-sm">Total Revenue</p>
-            </div>
-          </div>
-        </div>
-
-         {/* Schedule Card */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm col-span-full lg:col-span-2">
-          <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <BiCalendar className="text-orange-500" size={24} />
-            Business Hours
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'].map((day) => (
-              <div key={day} className="flex items-center justify-between py-2 border-b border-gray-100">
-                <span className="text-gray-600">{day}</span>
-                <span className="font-medium">Not specified</span>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* Right column - Location and Reviews */}
+      <div className="lg:space-y-8">
+        {" "}
+        {/* Changed from lg:space-y-6 */}
         {/* Location Card */}
-        <div className="bg-white rounded-2xl p-6 shadow-sm">
+        <div className="bg-white rounded-2xl p-6 shadow-sm mb-8">
+          {" "}
+          {/* Changed from mb-6 */}
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <BiMapPin className="text-orange-500" size={24} />
+            <BiMapPin className="text-[var(--laala-color)]" size={24} />
             Location
           </h2>
           <p className="text-gray-600">Non sp&eacute;cifi&eacute;e</p>
         </div>
-
-         {/* Reviews Card */}
-         <div className="bg-white rounded-2xl p-6 shadow-sm col-span-full">
+        {/* Reviews Card - moved from bottom */}
+        <div className="bg-white rounded-2xl p-6 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold flex items-center gap-2">
-              <BiStar className="text-orange-500" size={24} />
+              <BiStar className="text-[var(--laala-color)]" size={24} />
               Customer Reviews
             </h2>
-            <button className="text-orange-500 flex items-center gap-1 hover:text-orange-600">
+            <button className="text-[var(--laala-color)] flex items-center gap-1 hover:text-[#e54d2e]">
               View all <BiChevronRight size={16} />
             </button>
           </div>
@@ -106,7 +122,9 @@ const Prestataire_detail = () => {
                 <BiStar
                   key={star}
                   size={20}
-                  className={star <= 3 ? "text-orange-500" : "text-gray-300"}
+                  className={
+                    star <= 3 ? "text-[var(--laala-color)]" : "text-gray-300"
+                  }
                   fill={star <= 3 ? "currentColor" : "none"}
                 />
               ))}
@@ -114,8 +132,36 @@ const Prestataire_detail = () => {
             <span className="text-gray-600">0 reviews</span>
           </div>
         </div>
-       </main>
-    );
-}
+      </div>
+
+      {/* Full width Schedule Card */}
+      <div className="bg-white rounded-2xl p-6 shadow-sm col-span-full">
+        <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+          <BiCalendar className="text-[var(--laala-color)]" size={24} />
+          Business Hours
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi",
+            "Samedi",
+            "Dimanche",
+          ].map((day) => (
+            <div
+              key={day}
+              className="flex items-center justify-between py-2 border-b border-gray-100"
+            >
+              <span className="text-gray-600">{day}</span>
+              <span className="font-medium">Not specified</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+};
 
 export default Prestataire_detail;
