@@ -1,7 +1,7 @@
-import { AiOutlineEye } from ' react-icons/ai' ;
-import { LuChartNoAxesColumn } from ' react-icons/lu' ;
-import { BiMessageRounded } from ' react-icons/bi' ;
-import laala from "@/données/laala.json";
+import { AiOutlineEye } from 'react-icons/ai' ;
+import { LuChartNoAxesColumn } from 'react-icons/lu' ;
+import { BiMessageRounded } from 'react-icons/bi' ;
+import laala from "@/donnees/laala.json";
 
 export default function Layout({children}: {children: React.ReactNode}) {
     return (

@@ -1,5 +1,5 @@
 import { FaRegEdit, FaRegTrashAlt } from "react-icons/fa";
-import article from "../../données/article.json"
+import article from "../../donnees/article.json"
 export default function Layout({children}: {children: React.ReactNode}) {
     return (
         <header>

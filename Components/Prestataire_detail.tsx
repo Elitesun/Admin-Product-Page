@@ -1,6 +1,6 @@
 import { BiMapPin, BiStar, BiLike, BiShow, BiDollar, BiCalendar, BiCertification, BiStore, BiChevronRight } from 'react-icons/bi' 
 import { MdDeliveryDining } from "react-icons/md";
-import prestataire from "../données/prestataire.json"
+import prestataire from "../donnees/prestataire.json"
 const Prestataire_detail = () => {
     return (
        <main className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -22,7 +22,7 @@ const Prestataire_detail = () => {
             <div className="flex gap-5">
               <div className="flex items-center gap-2">
                 <BiCertification className="text-orange-500" size={20} />
-                <span className="text-gray-600">{prestataire.iscert ? "Certifié" : "Non Certifié"}</span>
+                <span className="text-gray-600">{prestataire.iscert ? "Certifi&eacute;" : "Non Certifi&eacute;"}</span>
               </div>
               <div className="flex items-center gap-2">
                 <MdDeliveryDining className="text-orange-500" size={20} />
@@ -72,7 +72,7 @@ const Prestataire_detail = () => {
             Business Hours
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[' Lundi' , ' Mardi' , ' Mercredi' , ' Jeudi' , ' Vendredi' , ' Samedi' , ' Dimanche' ].map((day) => (
+            {['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'].map((day) => (
               <div key={day} className="flex items-center justify-between py-2 border-b border-gray-100">
                 <span className="text-gray-600">{day}</span>
                 <span className="font-medium">Not specified</span>
@@ -86,7 +86,7 @@ const Prestataire_detail = () => {
             <BiMapPin className="text-orange-500" size={24} />
             Location
           </h2>
-          <p className="text-gray-600">Non spécifiée</p>
+          <p className="text-gray-600">Non sp&eacute;cifi&eacute;e</p>
         </div>
 
          {/* Reviews Card */}

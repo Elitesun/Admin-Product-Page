@@ -18,7 +18,7 @@ export default function Home() {
 
           <Link href="/produit" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
             <h2 className="text-xl font-semibold text-gray-800">Produit</h2>
-            <p className="mt-2 text-gray-600">G&#233;rer les produits et l' inventaire</p>
+            <p className="mt-2 text-gray-600">G&#233;rer les produits et l&apos;inventaire</p>
           </Link>
 
           <Link href="/prestataire" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">

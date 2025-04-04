@@ -1,5 +1,5 @@
 import Image from "next/image";
-import prestataire from "../../données/prestataire.json"
+import prestataire from "../../donnees/prestataire.json"
 export default function Layout({children}: {children: React.ReactNode}) {
     return (
         <div className="min-h-screen bg-gray-50 p-6 md:p-10">

@@ -1,7 +1,7 @@
 
-import { BsCalendar } from 'react-icons/bs' ;
-import laala from "@/données/laala.json";
-import Image from 'next/image' ;
+import { BsCalendar } from "react-icons/bs";
+import laala from "@/donnees/laala.json";
+import Image from "next/image";
 const Laala_detail = () => {
     return (
              <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -21,7 +21,7 @@ const Laala_detail = () => {
                   </span>
                   {laala.isSignaler && (
                     <span className="px-2 py-1 text-xs bg-red-100 text-red-800 rounded-full">
-                      Signalé
+                      Signal&eacute;
                     </span>
                   )}
                 </div>
@@ -66,7 +66,7 @@ const Laala_detail = () => {
             <div className="border-t border-gray-200 pt-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                     alt="Creator"
                     className="w-12 h-12 rounded-full border-2 border-orange-200"
@@ -83,7 +83,7 @@ const Laala_detail = () => {
                   </div>
                   <div>
                     <p className="text-2xl font-semibold text-gray-900">{laala.likes}</p>
-                    <p className="text-sm text-gray-500">J' aime</p>
+                    <p className="text-sm text-gray-500">J&apos;aime</p>
                   </div>
                   <div>
                     <p className="text-2xl font-semibold text-gray-900">{laala.nbrEmoji}</p>

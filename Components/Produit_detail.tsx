@@ -1,5 +1,5 @@
 import { FaRegCalendarAlt , FaRegThumbsUp , FaShoppingCart , FaEye } from "react-icons/fa";
-import article from "../données/article.json"
+import article from "../donnees/article.json"
 import Image from "next/image";
 const Product_detail = () => {
   return (
@@ -14,7 +14,7 @@ const Product_detail = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <h3 className="text-sm font-medium text-gray-900 mb-3">État du Produit</h3>
+      <h3 className="text-sm font-medium text-gray-900 mb-3">&Eacute;tat du Produit</h3>
        {/* Etats du produit */}
       <div className="flex flex-wrap gap-3">
           <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isNouveau ? ' bg-orange-50'  : ' bg-gray-100' }`}>
@@ -31,7 +31,7 @@ const Product_detail = () => {
           </div>
           <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.alaune ? ' bg-green-50'  : ' bg-gray-100' }`}>
             <div className={`w-2 h-2 rounded-full ${article.alaune ? ' bg-green-500'  : ' bg-gray-400' }`}></div>
-            <span className={`text-sm font-medium ${article.alaune ? ' text-green-700'  : ' text-gray-600' }`}>À la une</span>
+            <span className={`text-sm font-medium ${article.alaune ? ' text-green-700'  : ' text-gray-600' }`}>&Agrave; la une</span>
           </div>
         </div>
       
@@ -70,7 +70,7 @@ const Product_detail = () => {
         <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
           <FaRegThumbsUp className="h-4 w-4 text-orange-400" />
           <span className="text-sm font-medium text-gray-700">{article.likes}</span>
-          <span className="text-xs text-orange-600">j' aime</span>
+          <span className="text-xs text-orange-600">j&apos; aime</span>
         </div>
         <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
           <FaRegCalendarAlt className="h-4 w-4 text-orange-400" />

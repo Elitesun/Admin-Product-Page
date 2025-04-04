@@ -1,5 +1,5 @@
 import { FaRegCalendarAlt, FaRegThumbsUp, FaShoppingCart, FaEye, FaClock, FaUserTie, FaStore, FaCheckCircle } from "react-icons/fa";
-import boutique from "../données/boutique.json";
+import boutique from "../donnees/boutique.json";
 import Image from "next/image";
 
 const Boutique_detail = () => {
@@ -16,8 +16,8 @@ const Boutique_detail = () => {
           />
         </div>
 
-        <h3 className="text-sm font-medium text-gray-900 mb-3">État de la Boutique</h3>
-        {/* États de la boutique */}
+        <h3 className="text-sm font-medium text-gray-900 mb-3">&Eacute;tat de la Boutique</h3>
+        {/* Etats de la boutique */}
         <div className="flex flex-wrap gap-3">
           <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${boutique.iscert ? ' bg-blue-50'  : ' bg-gray-100' }`}>
             <div className={`w-2 h-2 rounded-full ${boutique.iscert ? ' bg-blue-500'  : ' bg-gray-400' }`}></div>
@@ -63,7 +63,7 @@ const Boutique_detail = () => {
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
             <FaRegThumbsUp className="h-4 w-4 text-orange-400" />
             <span className="text-sm font-medium text-gray-700">{boutique.likes}</span>
-            <span className="text-xs text-orange-600">j' aime</span>
+            <span className="text-xs text-orange-600">j&apos; aime</span>
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-orange-100 transition-colors">
             <FaRegCalendarAlt className="h-4 w-4 text-orange-400" />
@@ -77,7 +77,7 @@ const Boutique_detail = () => {
           <div className="flex flex-wrap gap-3">
             <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${boutique.gererSAV ? ' bg-green-50 text-green-700'  : ' bg-gray-100 text-gray-600' }`}>
               <FaCheckCircle className="h-4 w-4" />
-              <span className="text-sm">Service Après-Vente</span>
+              <span className="text-sm">Service Apr&egrave;s-Vente</span>
             </div>
             <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${boutique.isLoyerPaid ? ' bg-green-50 text-green-700'  : ' bg-gray-100 text-gray-600' }`}>
               <FaCheckCircle className="h-4 w-4" />
@@ -88,7 +88,7 @@ const Boutique_detail = () => {
 
         {/* Horaires */}
         <div className="space-y-3">
-          <h3 className="text-sm font-medium text-gray-900">Horaires d' ouverture</h3>
+          <h3 className="text-sm font-medium text-gray-900">Horaires d&apos; ouverture</h3>
           <div className="grid grid-cols-1 gap-2">
             {boutique.horaires.map((horaire, index) => (
               <div key={index} className="flex items-center justify-between px-3 py-2 bg-gray-50 rounded-md">
