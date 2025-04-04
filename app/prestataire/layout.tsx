@@ -1,3 +1,4 @@
+import Image from "next/image";
 import prestataire from "../../données/prestataire.json"
 export default function Layout({children}: {children: React.ReactNode}) {
     return (
@@ -8,7 +9,7 @@ export default function Layout({children}: {children: React.ReactNode}) {
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900">{prestataire.nom}</h1>
             <div className="flex items-center space-x-4 mt-3">
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1588854337115-1c67d9247e4d?ixlib=rb-4.0.3"
                     alt="Creator"
                     className="w-12 h-12 rounded-full border-2 border-orange-200"

@@ -1,4 +1,4 @@
-import PrestataireDetail from "@/Components/détails_prestataire";
+import PrestataireDetail from "@/Components/Prestataire_detail";
 const page = () => {
     return (
         <main >

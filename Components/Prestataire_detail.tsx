@@ -1,4 +1,4 @@
-import { BiMapPin, BiStar, BiLike, BiShow, BiDollar, BiCalendar, BiCertification, BiStore, BiChevronRight } from 'react-icons/bi'
+import { BiMapPin, BiStar, BiLike, BiShow, BiDollar, BiCalendar, BiCertification, BiStore, BiChevronRight } from 'react-icons/bi' 
 import { MdDeliveryDining } from "react-icons/md";
 import prestataire from "../données/prestataire.json"
 const Prestataire_detail = () => {
@@ -26,8 +26,8 @@ const Prestataire_detail = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MdDeliveryDining className="text-orange-500" size={20} />
-                <span className={`${prestataire.islivreur ? 'text-orange-500' : 'text-gray-600'}`}>
-                  {prestataire.islivreur ? 'Livreur' : 'Non Livreur'}
+                <span className={`${prestataire.islivreur ? ' text-orange-500'  : ' text-gray-600' }`}>
+                  {prestataire.islivreur ? 'Livreur'  : ' Non Livreur' }
                 </span>
               </div>
             </div>
@@ -72,7 +72,7 @@ const Prestataire_detail = () => {
             Business Hours
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'].map((day) => (
+            {[' Lundi' , ' Mardi' , ' Mercredi' , ' Jeudi' , ' Vendredi' , ' Samedi' , ' Dimanche' ].map((day) => (
               <div key={day} className="flex items-center justify-between py-2 border-b border-gray-100">
                 <span className="text-gray-600">{day}</span>
                 <span className="font-medium">Not specified</span>

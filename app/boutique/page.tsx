@@ -1,4 +1,4 @@
-import Boutique_detail from "@/Components/détails_boutique";
+import Boutique_detail from "@/Components/Boutique_detail";
 const page = () => {
     return (
         <main>

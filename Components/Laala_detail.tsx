@@ -1,6 +1,7 @@
 
-import { BsCalendar } from 'react-icons/bs';
+import { BsCalendar } from 'react-icons/bs' ;
 import laala from "@/données/laala.json";
+import Image from 'next/image' ;
 const Laala_detail = () => {
     return (
              <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -13,10 +14,10 @@ const Laala_detail = () => {
                   <h2 className="text-xl font-semibold text-gray-900">{laala.nom}</h2>
                   <span className={`px-2 py-1 text-xs rounded-full ${
                     laala.encours 
-                      ? 'bg-green-100 text-green-800' 
-                      : 'bg-gray-100 text-gray-800'
+                      ? ' bg-green-100 text-green-800'  
+                      : ' bg-gray-100 text-gray-800' 
                   }`}>
-                    {laala.encours ? 'Active' : 'Inactive'}
+                    {laala.encours ? ' Active'  : ' Inactive' }
                   </span>
                   {laala.isSignaler && (
                     <span className="px-2 py-1 text-xs bg-red-100 text-red-800 rounded-full">
@@ -45,7 +46,7 @@ const Laala_detail = () => {
 
             {/* Content Preview */}
             <div className="aspect-video bg-gray-100 rounded-lg flex items-center justify-center mb-6 relative">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
                 alt="Content Preview"
                 className="w-full h-full object-cover rounded-lg"
@@ -82,7 +83,7 @@ const Laala_detail = () => {
                   </div>
                   <div>
                     <p className="text-2xl font-semibold text-gray-900">{laala.likes}</p>
-                    <p className="text-sm text-gray-500">J'aime</p>
+                    <p className="text-sm text-gray-500">J' aime</p>
                   </div>
                   <div>
                     <p className="text-2xl font-semibold text-gray-900">{laala.nbrEmoji}</p>

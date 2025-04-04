@@ -1,4 +1,4 @@
-import Laala_detail from "@/Components/détails_laala";
+import Laala_detail from "@/Components/Laala_detail";
 const page = () => {
     return (
         <main>

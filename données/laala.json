@@ -31,7 +31,7 @@
     "video480": "",
     "horaires": ["09:00", "14:00", "18:00"],
     "chooseimg": true,
-    "sujets": ["Fashion", "Women's Clothing", "Style"],
+    "sujets": ["Fashion", "Women' s Clothing", "Style"],
     "iscert": false,
     "jour_fin": 31,
     "isLaalaPublic": true,
@@ -58,6 +58,6 @@
     "nom": "des vêtements pour les femmes",
     "idparticipants": ["user123", "user456"],
     "sortie": "2025-02-14",
-    "description": "A collection showcasing the latest trends in women's fashion",
+    "description": "A collection showcasing the latest trends in women' s fashion",
     "avatarCrea": "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
 }
