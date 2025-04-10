@@ -15,9 +15,14 @@
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   --card-radius: 1rem;
   --card-padding: 1.5rem;
+  --stats-radius: 0.75rem;
 
   /* Interaction States */
   --hover-bg: rgba(254, 87, 51, 0.05);
+
+  /* Common Backgrounds */
+  --bg-hover: rgba(254, 87, 51, 0.05);
+  --bg-light: #f9fafb;
 
   /* Typography */
   --title-large: 1.25rem;
@@ -27,17 +32,18 @@
   /* Spacing */
   --gap-standard: 1.5rem;
   --gap-small: 0.5rem;
+  --gap-normal: 1.5rem;
   --section-spacing: 2rem;
 }
 
 /* Common Card Style */
 .common-card {
-  @apply bg-white rounded-2xl p-6 shadow-sm;
+  @apply bg-white rounded-2xl shadow-sm p-6;
 }
 
 /* Common Stats Item */
 .stats-item {
-  @apply flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--hover-bg)] transition-colors;
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--bg-hover)] transition-colors;
 }
 
 /* Common Section Title */

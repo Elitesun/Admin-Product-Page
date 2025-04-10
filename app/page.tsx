@@ -30,6 +30,16 @@ export default function Home() {
             <h2 className="text-xl font-semibold text-gray-800">Détail Laala</h2>
             <p className="mt-2 text-gray-600">Détails du produit Laala</p>
           </Link>
+
+          <Link href="/commande" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 className="text-xl font-semibold text-gray-800">Détail Commande</h2>
+            <p className="mt-2 text-gray-600">Détails sur les commandes</p>
+          </Link>
+
+          <Link href="/retrait" className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <h2 className="text-xl font-semibold text-gray-800">Détail Retrait</h2>
+            <p className="mt-2 text-gray-600">Détails sur les retraits</p>
+          </Link>
         </div>
       </main>
     </div>

@@ -1,13 +1,13 @@
 import {
-  FaRegCalendarAlt,
-  FaRegThumbsUp,
-  FaShoppingCart,
-  FaEye,
-  FaClock,
-  FaUserTie,
-  FaStore,
-  FaCheckCircle,
-} from "react-icons/fa";
+  Calendar,
+  ThumbsUp,
+  ShoppingCart,
+  Eye,
+  Clock,
+  User,
+  Store,
+  CheckCircle,
+} from "lucide-react";
 import boutique from "../donnees/boutique.json";
 import Image from "next/image";
 
@@ -33,55 +33,46 @@ const Boutique_detail = () => {
         {/* Etats de la boutique */}
         <div className="flex flex-wrap gap-3">
           <div
-            className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${
-              boutique.iscert ? " bg-blue-50" : " bg-gray-100"
-            }`}
+            className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${boutique.iscert ? " bg-blue-50" : " bg-gray-100"
+              }`}
           >
             <div
-              className={`w-2 h-2 rounded-full ${
-                boutique.iscert ? " bg-blue-500" : " bg-gray-400"
-              }`}
+              className={`w-2 h-2 rounded-full ${boutique.iscert ? " bg-blue-500" : " bg-gray-400"
+                }`}
             ></div>
             <span
-              className={`text-sm font-medium ${
-                boutique.iscert ? " text-blue-700" : " text-gray-600"
-              }`}
+              className={`text-sm font-medium ${boutique.iscert ? " text-blue-700" : " text-gray-600"
+                }`}
             >
               Certifiée
             </span>
           </div>
           <div
-            className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${
-              boutique.isboosted ? " bg-green-50" : " bg-gray-100"
-            }`}
+            className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${boutique.isboosted ? " bg-green-50" : " bg-gray-100"
+              }`}
           >
             <div
-              className={`w-2 h-2 rounded-full ${
-                boutique.isboosted ? " bg-green-500" : " bg-gray-400"
-              }`}
+              className={`w-2 h-2 rounded-full ${boutique.isboosted ? " bg-green-500" : " bg-gray-400"
+                }`}
             ></div>
             <span
-              className={`text-sm font-medium ${
-                boutique.isboosted ? " text-green-700" : " text-gray-600"
-              }`}
+              className={`text-sm font-medium ${boutique.isboosted ? " text-green-700" : " text-gray-600"
+                }`}
             >
               Boostée
             </span>
           </div>
           <div
-            className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${
-              boutique.isPromoted ? " bg-purple-50" : " bg-gray-100"
-            }`}
+            className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${boutique.isPromoted ? " bg-purple-50" : " bg-gray-100"
+              }`}
           >
             <div
-              className={`w-2 h-2 rounded-full ${
-                boutique.isPromoted ? " bg-purple-500" : " bg-gray-400"
-              }`}
+              className={`w-2 h-2 rounded-full ${boutique.isPromoted ? " bg-purple-500" : " bg-gray-400"
+                }`}
             ></div>
             <span
-              className={`text-sm font-medium ${
-                boutique.isPromoted ? " text-purple-700" : " text-gray-600"
-              }`}
+              className={`text-sm font-medium ${boutique.isPromoted ? " text-purple-700" : " text-gray-600"
+                }`}
             >
               Promue
             </span>
@@ -93,13 +84,13 @@ const Boutique_detail = () => {
       <div className="space-y-5">
         <div className="space-y-3">
           <div className="flex items-center gap-3">
-            <FaStore className="h-6 w-6 text-[var(--laala-color)]" />
+            <Store className="h-6 w-6 text-[var(--laala-color)]" />
             <h2 className="text-xl font-medium text-gray-900">
               {boutique.nom}
             </h2>
           </div>
           <div className="flex items-center gap-3 text-gray-600">
-            <FaUserTie className="h-5 w-5" />
+            <User className="h-5 w-5" />
             <span>{boutique.proprietaire}</span>
           </div>
           <p className="text-gray-600">{boutique.desc}</p>
@@ -108,21 +99,21 @@ const Boutique_detail = () => {
         {/* Stats Cards */}
         <div className="flex flex-wrap justify-between p-2 rounded-lg">
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[var(--laala-color)]/10 transition-colors">
-            <FaEye className="h-4 w-4 text-[var(--laala-color)]" />
+            <Eye className="h-4 w-4 text-[var(--laala-color)]" />
             <span className="text-sm font-medium text-gray-700">
               {boutique.nbrConsultes}
             </span>
             <span className="text-xs text-[var(--laala-color)]">vues</span>
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[var(--laala-color)]/10 transition-colors">
-            <FaShoppingCart className="h-4 w-4 text-[var(--laala-color)]" />
+            <ShoppingCart className="h-4 w-4 text-[var(--laala-color)]" />
             <span className="text-sm font-medium text-gray-700">
               {boutique.nbrArticle}
             </span>
             <span className="text-xs text-[var(--laala-color)]">articles</span>
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[var(--laala-color)]/10 transition-colors">
-            <FaRegThumbsUp className="h-4 w-4 text-[var(--laala-color)]" />
+            <ThumbsUp className="h-4 w-4 text-[var(--laala-color)]" />
             <span className="text-sm font-medium text-gray-700">
               {boutique.likes}
             </span>
@@ -131,7 +122,7 @@ const Boutique_detail = () => {
             </span>
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[var(--laala-color)]/10 transition-colors">
-            <FaRegCalendarAlt className="h-4 w-4 text-[var(--laala-color)]" />
+            <Calendar className="h-4 w-4 text-[var(--laala-color)]" />
             <span className="text-sm font-medium text-gray-700">
               {boutique.date}
             </span>
@@ -143,23 +134,21 @@ const Boutique_detail = () => {
           <h3 className="text-sm font-medium text-gray-900">Services</h3>
           <div className="flex flex-wrap gap-3">
             <div
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${
-                boutique.gererSAV
-                  ? " bg-green-50 text-green-700"
-                  : " bg-gray-100 text-gray-600"
-              }`}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${boutique.gererSAV
+                ? " bg-green-50 text-green-700"
+                : " bg-gray-100 text-gray-600"
+                }`}
             >
-              <FaCheckCircle className="h-4 w-4" />
+              <CheckCircle className="h-4 w-4" />
               <span className="text-sm">Service Apr&egrave;s-Vente</span>
             </div>
             <div
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${
-                boutique.isLoyerPaid
-                  ? " bg-green-50 text-green-700"
-                  : " bg-gray-100 text-gray-600"
-              }`}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${boutique.isLoyerPaid
+                ? " bg-green-50 text-green-700"
+                : " bg-gray-100 text-gray-600"
+                }`}
             >
-              <FaCheckCircle className="h-4 w-4" />
+              <CheckCircle className="h-4 w-4" />
               <span className="text-sm">Loyer à Jour</span>
             </div>
           </div>
@@ -178,7 +167,7 @@ const Boutique_detail = () => {
               >
                 <span className="text-sm text-gray-600">{horaire.jour}</span>
                 <div className="flex items-center gap-2">
-                  <FaClock className="h-4 w-4 text-[var(--laala-color)]" />
+                  <Clock className="h-4 w-4 text-[var(--laala-color)]" />
                   <span className="text-sm text-gray-700">
                     {horaire.start === 0 && horaire.end === 0
                       ? " Fermé"

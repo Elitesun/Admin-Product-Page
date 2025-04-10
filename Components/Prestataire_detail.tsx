@@ -1,15 +1,15 @@
 import {
-  BiMapPin,
-  BiStar,
-  BiLike,
-  BiShow,
-  BiDollar,
-  BiCalendar,
-  BiCertification,
-  BiStore,
-  BiChevronRight,
-} from "react-icons/bi";
-import { MdDeliveryDining } from "react-icons/md";
+  MapPin,
+  Star,
+  ThumbsUp,
+  Eye,
+  DollarSign,
+  Calendar,
+  Award,
+  Store,
+  ChevronRight,
+} from "lucide-react";
+import { Truck } from "lucide-react";
 import prestataire from "../donnees/prestataire.json";
 
 const Prestataire_detail = () => {
@@ -18,7 +18,7 @@ const Prestataire_detail = () => {
       {/* Left column - Details Card */}
       <div className="bg-white rounded-2xl p-6 shadow-sm lg:col-span-2">
         <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-          <BiStore className="text-[var(--laala-color)]" size={24} />
+          <Store className="text-[var(--laala-color)]" size={24} />
           Details
         </h2>
         <div className="space-y-4">
@@ -32,25 +32,18 @@ const Prestataire_detail = () => {
           </div>
           <div className="flex gap-5">
             <div className="flex items-center gap-2">
-              <BiCertification
-                className="text-[var(--laala-color)]"
-                size={20}
-              />
+              <Award className="text-[var(--laala-color)]" size={20} />
               <span className="text-gray-600">
                 {prestataire.iscert ? "Certifi&eacute;" : "Non Certifi&eacute;"}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <MdDeliveryDining
-                className="text-[var(--laala-color)]"
-                size={20}
-              />
+              <Truck className="text-[var(--laala-color)]" size={20} />
               <span
-                className={`${
-                  prestataire.islivreur
-                    ? " text-[var(--laala-color)]"
-                    : " text-gray-600"
-                }`}
+                className={`${prestataire.islivreur
+                  ? " text-[var(--laala-color)]"
+                  : " text-gray-600"
+                  }`}
               >
                 {prestataire.islivreur ? "Livreur" : " Non Livreur"}
               </span>
@@ -59,7 +52,7 @@ const Prestataire_detail = () => {
           {/* Updated Stats Info */}
           <div className="flex flex-wrap gap-3 mt-6">
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--laala-color)]/5 transition-colors">
-              <BiLike className="h-5 w-5 text-[var(--laala-color)]" />
+              <ThumbsUp className="h-5 w-5 text-[var(--laala-color)]" />
               <div className="flex flex-col items-center sm:flex-row sm:gap-2 sm:items-baseline">
                 <span className="text-base font-semibold text-gray-900">
                   {prestataire.nbrlikes}
@@ -69,7 +62,7 @@ const Prestataire_detail = () => {
             </div>
 
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--laala-color)]/5 transition-colors">
-              <BiShow className="h-5 w-5 text-[var(--laala-color)]" />
+              <Eye className="h-5 w-5 text-[var(--laala-color)]" />
               <div className="flex flex-col items-center sm:flex-row sm:gap-2 sm:items-baseline">
                 <span className="text-base font-semibold text-gray-900">
                   {prestataire.nbrviews}
@@ -79,7 +72,7 @@ const Prestataire_detail = () => {
             </div>
 
             <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--laala-color)]/5 transition-colors">
-              <BiDollar className="h-5 w-5 text-[var(--laala-color)]" />
+              <DollarSign className="h-5 w-5 text-[var(--laala-color)]" />
               <div className="flex flex-col items-center sm:flex-row sm:gap-2 sm:items-baseline">
                 <span className="text-base font-semibold text-gray-900">5</span>
                 <span className="text-xs text-[var(--laala-color)]">
@@ -100,7 +93,7 @@ const Prestataire_detail = () => {
           {" "}
           {/* Changed from mb-6 */}
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-            <BiMapPin className="text-[var(--laala-color)]" size={24} />
+            <MapPin className="text-[var(--laala-color)]" size={24} />
             Location
           </h2>
           <p className="text-gray-600">Non sp&eacute;cifi&eacute;e</p>
@@ -109,17 +102,17 @@ const Prestataire_detail = () => {
         <div className="bg-white rounded-2xl p-6 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold flex items-center gap-2">
-              <BiStar className="text-[var(--laala-color)]" size={24} />
+              <Star className="text-[var(--laala-color)]" size={24} />
               Customer Reviews
             </h2>
             <button className="text-[var(--laala-color)] flex items-center gap-1 hover:text-[#e54d2e]">
-              View all <BiChevronRight size={16} />
+              View all <ChevronRight size={16} />
             </button>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((star) => (
-                <BiStar
+                <Star
                   key={star}
                   size={20}
                   className={
@@ -137,7 +130,7 @@ const Prestataire_detail = () => {
       {/* Full width Schedule Card */}
       <div className="bg-white rounded-2xl p-6 shadow-sm col-span-full">
         <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
-          <BiCalendar className="text-[var(--laala-color)]" size={24} />
+          <Calendar className="text-[var(--laala-color)]" size={24} />
           Business Hours
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
