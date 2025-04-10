@@ -1,4 +1,46 @@
 @import "tailwindcss";
+
 :root {
+  /* Brand Colors */
   --laala-color: #fe5733;
+  --laala-hover: #e54d2e;
+
+  /* Neutral Colors */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-600: #4b5563;
+  --gray-900: #111827;
+
+  /* Component Styles */
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --card-radius: 1rem;
+  --card-padding: 1.5rem;
+
+  /* Interaction States */
+  --hover-bg: rgba(254, 87, 51, 0.05);
+
+  /* Typography */
+  --title-large: 1.25rem;
+  --text-small: 0.875rem;
+  --text-xs: 0.75rem;
+
+  /* Spacing */
+  --gap-standard: 1.5rem;
+  --gap-small: 0.5rem;
+  --section-spacing: 2rem;
+}
+
+/* Common Card Style */
+.common-card {
+  @apply bg-white rounded-2xl p-6 shadow-sm;
+}
+
+/* Common Stats Item */
+.stats-item {
+  @apply flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-xl hover:bg-[var(--hover-bg)] transition-colors;
+}
+
+/* Common Section Title */
+.section-title {
+  @apply text-xl font-semibold mb-4 flex items-center gap-2;
 }
