@@ -16,26 +16,7 @@ const Product_detail = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <h3 className="text-sm font-medium text-gray-900 mb-3">&Eacute;tat du Produit</h3>
-        {/* Etats du produit */}
-        <div className="flex flex-wrap gap-3">
-          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isNouveau ? ' bg-[#FE5733]/10' : ' bg-gray-100'}`}>
-            <div className={`w-2 h-2 rounded-full ${article.isNouveau ? ' bg-[#FE5733]' : ' bg-gray-400'}`}></div>
-            <span className={`text-sm font-medium ${article.isNouveau ? ' text-[#FE5733]' : ' text-gray-600'}`}>Nouveau</span>
-          </div>
-          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isRecommand ? ' bg-green-50' : ' bg-gray-100'}`}>
-            <div className={`w-2 h-2 rounded-full ${article.isRecommand ? ' bg-green-500' : ' bg-gray-400'}`}></div>
-            <span className={`text-sm font-medium ${article.isRecommand ? ' text-green-700' : ' text-gray-600'}`}>Recommandé</span>
-          </div>
-          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isboosted ? ' bg-green-50' : ' bg-gray-100'}`}>
-            <div className={`w-2 h-2 rounded-full ${article.isboosted ? ' bg-green-500' : ' bg-gray-400'}`}></div>
-            <span className={`text-sm font-medium ${article.isboosted ? ' text-green-700' : ' text-gray-600'}`}>Boosté</span>
-          </div>
-          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.alaune ? ' bg-green-50' : ' bg-gray-100'}`}>
-            <div className={`w-2 h-2 rounded-full ${article.alaune ? ' bg-green-500' : ' bg-gray-400'}`}></div>
-            <span className={`text-sm font-medium ${article.alaune ? ' text-green-700' : ' text-gray-600'}`}>&Agrave; la une</span>
-          </div>
-        </div>
+
 
       </div>
 
@@ -77,6 +58,27 @@ const Product_detail = () => {
           <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[#FE5733]/10 transition-colors">
             <Calendar className="h-4 w-4 text-[#FE5733]" />
             <span className="text-sm font-medium text-gray-700">{`${article.jour}/${article.mois}/${article.annee}`}</span>
+          </div>
+        </div>
+
+        <h3 className="text-sm font-medium text-gray-900 mb-3">&Eacute;tat du Produit</h3>
+        {/* Etats du produit */}
+        <div className="flex flex-wrap gap-3 my-2">
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isNouveau ? ' bg-[#FE5733]/10' : ' bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isNouveau ? ' bg-[#FE5733]' : ' bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isNouveau ? ' text-[#FE5733]' : ' text-gray-600'}`}>Nouveau</span>
+          </div>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isRecommand ? ' bg-green-50' : ' bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isRecommand ? ' bg-green-500' : ' bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isRecommand ? ' text-green-700' : ' text-gray-600'}`}>Recommandé</span>
+          </div>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.isboosted ? ' bg-green-50' : ' bg-gray-50'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.isboosted ? ' bg-green-500' : ' bg-gray-400'}`}></div>
+            <span className={`text-sm font-medium ${article.isboosted ? ' text-green-700' : ' text-gray-600'}`}>Boosté</span>
+          </div>
+          <div className={`w-fit inline-flex items-center gap-2 px-3 py-1 rounded-full ${article.alaune ? ' bg-green-50' : ' bg-gray-100'}`}>
+            <div className={`w-2 h-2 rounded-full ${article.alaune ? ' bg-green-500' : ' bg-gray-500'}`}></div>
+            <span className={`text-sm font-medium ${article.alaune ? ' text-green-700' : ' text-gray-600'}`}>&Agrave; la une</span>
           </div>
         </div>
 

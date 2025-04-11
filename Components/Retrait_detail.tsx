@@ -1,5 +1,5 @@
 import retrait from '../donnees/retrait.json'
-import { ArrowLeft, User, Wallet } from "lucide-react"
+import { User, Wallet } from "lucide-react"
 
 const Retrait_detail = () => {
     return (
@@ -52,14 +52,14 @@ const Retrait_detail = () => {
                             </div>
                             <div>
                                 <p className="text-sm text-gray-500 mb-2">Type de retrait</p>
-                                <div className="flex gap-2">
+                                <div className="flex flex-wrap gap-2">
                                     {retrait.iskouri && (
-                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100">
+                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 border border-blue-300 shadow-sm">
                                             Kouri
                                         </span>
                                     )}
                                     {retrait.ismobilem && (
-                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100">
+                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800 border border-blue-300 shadow-sm">
                                             Mobile Money
                                         </span>
                                     )}

@@ -1,9 +1,31 @@
 import commande from "../donnees/commande.json"
-import { ClipboardList, User, Store, Package, Truck } from "lucide-react"
+import { ClipboardList, User, Store } from "lucide-react"
 import Image from "next/image"
 
 const Commande_detail = () => {
     const totalAmount = commande.prixcmd + commande.prixlivraison;
+
+    const formatDate = (dateStr: string) => {
+        // Convert from DD-MM-YYYY to YYYY-MM-DD
+        const [day, month, year] = dateStr.split('-');
+        const date = new Date(`${year}-${month}-${day}`);
+
+        return new Intl.DateTimeFormat('fr-FR', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }).format(date);
+    };
+
+    const formatTime = (timeStr: string) => {
+        const [hours, minutes] = timeStr.split(':');
+        const date = new Date();
+        date.setHours(parseInt(hours), parseInt(minutes));
+        return date.toLocaleTimeString('fr-FR', {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    };
 
     return (
         <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-[var(--card-padding)]">
@@ -43,11 +65,11 @@ const Commande_detail = () => {
                                     </div>
                                     <div>
                                         <span className="text-gray-500">Date:</span>
-                                        <span className="ml-2">{commande.date}</span>
+                                        <span className="ml-2">{formatDate(commande.date)}</span>
                                     </div>
                                     <div>
                                         <span className="text-gray-500">Heure:</span>
-                                        <span className="ml-2">{commande.heure}</span>
+                                        <span className="ml-2">{formatTime(commande.heure)}</span>
                                     </div>
                                     <div>
                                         <span className="text-gray-500">Mode de paiement:</span>
