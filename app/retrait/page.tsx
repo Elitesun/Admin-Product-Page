@@ -1,8 +1,11 @@
-import React from 'react'
+import Retrait_detail from "@/Components/Retrait_detail"
+
 
 const page = () => {
     return (
-        <div>page</div>
+        <div>
+            <Retrait_detail />
+        </div>
     )
 }
 

@@ -18,7 +18,7 @@ const Commande_detail = () => {
                         <div className="common-card overflow-hidden flex flex-col md:flex-row">
                             <div className="w-full md:w-2/5">
                                 <Image
-                                    src="https://images.unsplash.com/photo-1559841644-08984562005a"
+                                    src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=800"
                                     alt={commande.article}
                                     width={800}
                                     height={600}
