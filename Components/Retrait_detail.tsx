@@ -54,12 +54,12 @@ const Retrait_detail = () => {
                                 <p className="text-sm text-gray-500 mb-2">Type de retrait</p>
                                 <div className="flex gap-2">
                                     {retrait.iskouri && (
-                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-[var(--bg-hover)] text-[var(--laala-color)]">
+                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100">
                                             Kouri
                                         </span>
                                     )}
                                     {retrait.ismobilem && (
-                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-[var(--bg-hover)] text-[var(--laala-color)]">
+                                        <span className="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100">
                                             Mobile Money
                                         </span>
                                     )}
