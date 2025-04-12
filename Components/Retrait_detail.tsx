@@ -13,9 +13,11 @@ const Retrait_detail = () => {
                 <div className="common-card p-6">
                     <div className="grid md:grid-cols-2 gap-8">
                         <div className="space-y-4">
-                            <div>
+                            <div className="flex items-center gap-2 flex-wrap">
                                 <span className="text-gray-500">ID Retrait:</span>
-                                <span className="ml-2 font-mono bg-[var(--bg-hover)] px-2 py-0.5 rounded">#{retrait.id}</span>
+                                <span className="text-sm md:text-base lg:text-lg font-mono bg-[var(--bg-hover)] px-2 py-0.5 rounded break-all">
+                                    #{retrait.id}
+                                </span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <User className="w-5 h-5 text-gray-400" />

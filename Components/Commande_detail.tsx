@@ -28,9 +28,9 @@ const Commande_detail = () => {
     };
 
     return (
-        <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-[var(--card-padding)]">
-            <div className="w-full max-w-7xl mx-auto">
-                <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-[var(--gap-small)] mb-8">
+        <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-4">
+            <div className="w-full">
+                <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-[var(--gap-small)] mb-6">
                     <ClipboardList className="w-7 h-7 text-[var(--laala-color)]" />
                     Détails de la Commande
                 </h1>
