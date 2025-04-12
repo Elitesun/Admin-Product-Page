@@ -28,14 +28,14 @@ const Commande_detail = () => {
     };
 
     return (
-        <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-4">
+        <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-0 sm:p-4">
             <div className="w-full">
-                <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-[var(--gap-small)] mb-6">
+                <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-[var(--gap-small)] px-2 mb-3 sm:mb-6">
                     <ClipboardList className="w-7 h-7 text-[var(--laala-color)]" />
                     Détails de la Commande
                 </h1>
 
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 sm:gap-6">
                     <div className="lg:col-span-2">
                         <div className="common-card overflow-hidden flex flex-col md:flex-row">
                             <div className="w-full md:w-2/5">
