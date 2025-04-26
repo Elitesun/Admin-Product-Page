@@ -1,10 +1,8 @@
-import Commande_detail from "@/Components/Commande_detail"
+import Commande_detail from "@/Components/Commande_detail";
 
 
 const page = () => {
-    return (
-        <main><Commande_detail /></main>
-    )
+    return <Commande_detail />;
 }
 
-export default page
+export default page;

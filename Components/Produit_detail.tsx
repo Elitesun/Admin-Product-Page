@@ -5,10 +5,20 @@ const Product_detail = () => {
   return (
     <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-0 sm:p-4">
       <div className="w-full">
+        {/* header */}
+        <div className="mb-6 flex items-center justify-between">
+          <div className="p-2">
+            <h1 className="text-2xl font-light text-gray-900">
+              Détails du Produit
+            </h1>
+            <p className="mt-1 text-sm text-gray-500">ID: {article.id}</p>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
           {/* Left Column - Image */}
           <div className="space-y-6">
-            {/* Product Image */}
+
             <div className="aspect-square w-3/4 mx-auto bg-gray-50 rounded-lg overflow-hidden shadow-sm">
               <Image
                 src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&q=80&w=800"
@@ -22,24 +32,26 @@ const Product_detail = () => {
 
           {/* Right Column - Details */}
           <div className="space-y-5">
-            <div>
-              <h2 className="text-xl font-medium text-gray-900">{article.nom}</h2>
-              <p className="mt-3 text-gray-600">{article.description}</p>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-1">
-                <div className="text-sm text-gray-500">Prix</div>
-                <div className="text-lg font-medium text-gray-900">{article.prix.toLocaleString()} FCFA</div>
+            <div className="space-y-4">
+              <div>
+                <h2 className="text-xl font-medium text-gray-900">{article.nom}</h2>
+                <p className="mt-3 text-gray-600">{article.description}</p>
               </div>
-              <div className="space-y-1">
-                <div className="text-sm text-gray-500">Catégorie</div>
-                <div className="text-lg font-medium text-gray-900">{article.categorie}</div>
+
+              <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                <div className="space-y-1">
+                  <div className="text-sm text-gray-500">Prix</div>
+                  <div className="text-lg font-medium text-gray-900">{article.prix.toLocaleString()} FCFA</div>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-sm text-gray-500">Catégorie</div>
+                  <div className="text-lg font-medium text-gray-900 break-words">{article.categorie}</div>
+                </div>
               </div>
             </div>
 
             {/* cards details */}
-            <div className="flex flex-wrap justify-between p-2 rounded-lg">
+            <div className="flex flex-wrap justify-between p-2 rounded-lg gap-2">
               <div className="flex items-center gap-2 px-3 py-1.5 bg-white rounded-md shadow-sm hover:bg-[#FE5733]/10 transition-colors">
                 <Eye className="h-4 w-4 text-[#FE5733]" />
                 <span className="text-sm font-medium text-gray-700">{article.nbrConsultes}</span>

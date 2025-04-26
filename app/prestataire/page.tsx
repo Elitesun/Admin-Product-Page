@@ -1,10 +1,7 @@
-import PrestataireDetail from "@/Components/Prestataire_detail";
+import Prestataire_detail from "@/Components/Prestataire_detail";
+
 const page = () => {
-    return (
-        <main >
-            <PrestataireDetail/>
-        </main>
-    );
+    return <Prestataire_detail />;
 }
 
 export default page;

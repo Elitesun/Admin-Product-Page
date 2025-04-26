@@ -1,12 +1,53 @@
-import { Calendar } from "lucide-react";
+import { Calendar, Eye, BarChart, MessageCircle } from "lucide-react";
 import laala from "@/donnees/laala.json";
 import Image from "next/image";
 const Laala_detail = () => {
   return (
-    <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-0 sm:p-4">
-      <div className="w-full">
-        <div className="common-card p-3 sm:p-6">
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+    <>
+      {/* Statistics section from layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-gray-500">Vues Total</p>
+                <p className="text-2xl font-semibold text-gray-900">{laala.vues}</p>
+              </div>
+              <div className="p-3 bg-orange-100 rounded-lg">
+                <Eye className="w-6 h-6 text-orange-600" />
+              </div>
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-gray-500">Engagement</p>
+                <p className="text-2xl font-semibold text-gray-900">50%</p>
+              </div>
+              <div className="p-3 bg-orange-100 rounded-lg">
+                <BarChart className="w-6 h-6 text-orange-600" />
+              </div>
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-gray-500">Commentaires</p>
+                <p className="text-2xl font-semibold text-gray-900">{laala.commentaires.length}</p>
+              </div>
+              <div className="p-3 bg-orange-100 rounded-lg">
+                <MessageCircle className="w-6 h-6 text-orange-600" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="rounded-2xl flex items-center bg-[var(--bg-light)] p-0 sm:p-4">
+        <div className="w-full">
+          <div className="common-card p-3 sm:p-6">
+
             <div className="p-3 sm:p-6">
               {/* Content Header */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
@@ -102,7 +143,8 @@ const Laala_detail = () => {
           </div>
         </div>
       </div>
-    </div>
+
+    </>
   );
 }
 

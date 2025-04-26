@@ -1,12 +1,8 @@
-import Retrait_detail from "@/Components/Retrait_detail"
+import Retrait_detail from "@/Components/Retrait_detail";
 
 
 const page = () => {
-    return (
-        <div>
-            <Retrait_detail />
-        </div>
-    )
+    return <Retrait_detail />;
 }
 
-export default page
+export default page;

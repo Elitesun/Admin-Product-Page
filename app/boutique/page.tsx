@@ -1,10 +1,7 @@
 import Boutique_detail from "@/Components/Boutique_detail";
+
 const page = () => {
-    return (
-        <main>
-            <Boutique_detail/>
-        </main>
-    );
+    return <Boutique_detail />;
 }
 
 export default page;
